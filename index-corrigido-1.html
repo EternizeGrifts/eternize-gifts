@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Eternize Gifts — ímãs personalizados para transformar fotos e momentos especiais em lembranças para sempre.">
+<title>Eternize Gifts | Eternizando momentos!</title>
+<style>
+:root{
+  --blue:#0c3769;
+  --blue2:#174f88;
+  --sky:#dff1ff;
+  --gold:#c99a3b;
+  --gold2:#e8c777;
+  --cream:#fffdf8;
+  --text:#173554;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,#f8fcff 0%,#eef7ff 48%,#fffdf8 100%);
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid #e4edf5;
+}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Georgia,serif;font-weight:700;letter-spacing:2px;color:var(--blue);font-size:24px}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:25px;font-weight:600;font-size:14px}
+nav a:hover{color:var(--gold)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 22px;border-radius:999px;background:var(--blue);color:#fff;font-weight:700;
+  box-shadow:0 8px 20px rgba(12,55,105,.16);transition:.2s
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#15375d}
+.hero{padding:54px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:42px;align-items:center}
+.badge{display:inline-block;padding:8px 13px;border:1px solid #d8b763;border-radius:999px;background:#fffaf0;color:#7b5b1e;font-weight:700;font-size:13px}
+h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,70px);line-height:.98;margin:18px 0 20px;color:var(--blue)}
+h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:18px;line-height:1.65;max-width:560px;color:#48617b}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-image{border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(23,79,136,.2);border:6px solid #fff}
+.hero-image img{display:block;width:100%;height:auto}
+.section{padding:78px 0}
+.section.alt{background:rgba(223,241,255,.45)}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-family:Georgia,serif;font-size:42px;margin:0 0 10px;color:var(--blue)}
+.title p{margin:0;color:#60758c;font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:#fff;border:1px solid #e4edf5;border-radius:22px;padding:28px;
+  box-shadow:0 12px 30px rgba(25,67,103,.07)
+}
+.icon{font-size:32px;margin-bottom:12px}
+.card h3{margin:5px 0 10px;color:var(--blue)}
+.card p{line-height:1.6;color:#61768b}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery figure{margin:0;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(25,67,103,.1)}
+.gallery img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+.gallery figcaption{padding:14px 16px;font-weight:700;color:var(--blue)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{text-align:center;padding:25px 15px}
+.step-number{
+  width:50px;height:50px;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px;
+  background:var(--blue);color:#fff;font-weight:800;font-size:18px
+}
+.business{
+  background:linear-gradient(135deg,var(--blue),#0a2b50);color:white;border-radius:30px;padding:48px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center
+}
+.business h2{font-family:Georgia,serif;font-size:40px;margin:0 0 12px}
+.business p{line-height:1.65;color:#dcecff}
+.business ul{padding-left:20px;line-height:2}
+.cta{text-align:center;background:linear-gradient(135deg,#fff8e8,#eef8ff)}
+.cta h2{font-family:Georgia,serif;font-size:42px;margin:0 0 12px;color:var(--blue)}
+footer{background:#092746;color:#dcecff;padding:35px 0}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.small{font-size:13px;color:#aac0d5}
+.mobile-menu{display:none}
+@media(max-width:850px){
+  nav{display:none}.mobile-menu{display:inline-flex}
+  .hero-grid,.business{grid-template-columns:1fr}
+  .cards,.gallery{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .hero{padding-top:30px}.section{padding:55px 0}
+  .cards,.gallery,.steps{grid-template-columns:1fr}
+  .business{padding:30px 24px}.business h2,.title h2,.cta h2{font-size:32px}
+  .logo{font-size:20px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio">ETERNIZE <span>GIFTS</span></a>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn mobile-menu" href="https://wa.me/5515991722421?text=Olá!%20Vim%20pelo%20site%20da%20Eternize%20Gifts%20e%20quero%20fazer%20um%20pedido." target="_blank">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">PERSONALIZADOS • ÍMÃS • PRESENTES</span>
+      <h1>Pequenos detalhes,<br><em>grandes histórias.</em></h1>
+      <p>Transforme suas fotos e momentos especiais em ímãs personalizados de 5 x 5 cm. Uma lembrança delicada para guardar na geladeira e no coração.</p>
+      <div class="actions">
+        <a class="btn gold" href="https://wa.me/5515991722421?text=Olá!%20Quero%20personalizar%20meus%20ímãs%20na%20Eternize%20Gifts." target="_blank">✨ Personalizar agora</a>
+        <a class="btn" href="#produtos">Ver produtos</a>
+      </div>
+    </div>
+    <div class="hero-image"><img src="eternize-2.png" alt="Ímãs personalizados Eternize Gifts"></div>
+  </div>
+</section>
+
+<section class="section" id="produtos">
+  <div class="container">
+    <div class="title">
+      <h2>Ímãs que contam a sua história</h2>
+      <p>Escolha o momento. Envie a foto. Nós eternizamos.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">📸</div><h3>Com suas fotos</h3><p>Use aquela foto especial da família, do seu pet, de uma viagem ou de uma pessoa querida.</p></article>
+      <article class="card"><div class="icon">💙</div><h3>Diversos temas</h3><p>Aniversário, casamento, nascimento, 15 anos, formatura, viagens e muito mais.</p></article>
+      <article class="card"><div class="icon">🎁</div><h3>Presente que encanta</h3><p>Uma lembrança personalizada para surpreender alguém especial em qualquer ocasião.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="personalizados">
+  <div class="container">
+    <div class="title">
+      <h2>Conheça nossos personalizados</h2>
+      <p>Qualidade, carinho e acabamento pensado em cada detalhe.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="eternize-1.png" alt="Logo Eternize Gifts"><figcaption>Eternize Gifts</figcaption></figure>
+      <figure><img src="eternize-3.png" alt="Qualidade dos ímãs personalizados"><figcaption>Qualidade em cada detalhe</figcaption></figure>
+      <figure><img src="eternize-5.png" alt="Ímãs para datas especiais"><figcaption>Datas especiais</figcaption></figure>
+      <figure><img src="eternize-6.png" alt="Ímãs para decorar a geladeira"><figcaption>Memórias sempre à vista</figcaption></figure>
+      <figure><img src="eternize-7.png" alt="Produção de ímãs personalizados"><figcaption>Personalize do seu jeito</figcaption></figure>
+      <figure><img src="eternize-9.png" alt="Ímãs personalizados com fotos"><figcaption>Suas fotos, suas histórias</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="title">
+      <h2>Como funciona?</h2>
+      <p>É simples criar uma lembrança única.</p>
+    </div>
+    <div class="steps" id="como-funciona">
+      <div class="step"><div class="step-number">1</div><h3>Escolha</h3><p>Escolha o modelo e a quantidade de ímãs.</p></div>
+      <div class="step"><div class="step-number">2</div><h3>Envie</h3><p>Envie suas fotos pelo WhatsApp.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>Personalize</h3><p>Definimos os detalhes e a arte com você.</p></div>
+      <div class="step"><div class="step-number">4</div><h3>Receba</h3><p>Seu pedido fica pronto para virar memória.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="empresas">
+  <div class="container">
+    <div class="business">
+      <div>
+        <h2>Ímãs personalizados para sua empresa</h2>
+        <p>Fortaleça sua marca com um brinde útil, bonito e memorável para clientes, parceiros e equipes.</p>
+        <a class="btn gold" href="https://wa.me/5515991722421?text=Olá!%20Tenho%20interesse%20em%20ímãs%20personalizados%20para%20minha%20empresa." target="_blank">Quero um orçamento</a>
+      </div>
+      <ul>
+        <li>Tamanho 5 x 5 cm</li>
+        <li>Formato quadrado</li>
+        <li>Impressão de alta qualidade</li>
+        <li>Cores vibrantes</li>
+        <li>Personalização da sua marca</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="contato">
+  <div class="container">
+    <h2>Vamos eternizar seu momento?</h2>
+    <p>Fale com a Eternize Gifts e faça seu pedido personalizado.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn gold" href="https://wa.me/5515991722421?text=Olá!%20Quero%20fazer%20meu%20pedido%20na%20Eternize%20Gifts." target="_blank">💬 Pedir pelo WhatsApp</a>
+      <a class="btn" href="https://instagram.com/eternize.giftss" target="_blank">Instagram @eternize.giftss</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><strong>ETERNIZE GIFTS</strong><br><span class="small">Eternizando momentos!</span></div>
+    <div class="small">WhatsApp: (15) 99172-2421 • Instagram: @eternize.giftss</div>
+    <div class="small">© 2026 Eternize Gifts</div>
+  </div>
+</footer>
+</body>
+</html>
